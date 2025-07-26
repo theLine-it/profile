@@ -1,0 +1,257 @@
+/*  sm  */
+@media (max-width:991px) {
+
+    .swiper-button-next {
+        right: 70% !important;
+    }
+
+    .swiper-button-prev {
+        right: 84% !important;
+    }
+
+    .accordion-button {
+        text-align: right !important;
+    }
+
+    footer {
+        text-align: center !important;
+    }
+
+    footer .icons-group {
+        margin: auto;
+    }
+
+  
+}
+
+
+
+/*  mid */
+@media(min-width:992px) and (max-width: 1199px) {}
+
+/*  large */
+@media(min-width:1200px) {}
+
+
+
+@media (min-width: 1400px) {
+
+    nav .nav-down {
+        display: block;
+    }
+
+    /*
+    header
+    */
+    .header-text {
+        width: 70%;
+        /* margin-left: auto !important; */
+        text-align: center;
+    }
+
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 1120px;
+    }
+}
+
+/* =====================================================
+           تنسيق القائمة الثابتة عند التمرير
+        ===================================================== */
+.sticky-menu {
+    position: fixed !important;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* =====================================================
+           تنسيق الشاشات الكبيرة (Desktop)
+        ===================================================== */
+@media (min-width: 1400px) {
+
+    /* إظهار القائمة الأصلية */
+    nav .nav-down {
+        display: block !important;
+    }
+
+    /* إخفاء زر القائمة */
+    .menu-toggle {
+        display: none !important;
+    }
+
+    /* إخفاء القائمة المنسدلة */
+    .mobile-menu {
+        display: none !important;
+    }
+}
+
+/* =====================================================
+           تنسيق الأجهزة اللوحية (Tablet)
+        ===================================================== */
+@media (min-width: 769px) and (max-width: 1399px) {
+
+    /* إظهار زر القائمة */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* إخفاء القائمة الأصلية */
+    .nav-down {
+        display: none !important;
+    }
+
+    /* إظهار القائمة المنسدلة */
+    .mobile-menu {
+        display: block;
+    }
+
+    .logo-img {
+        width: 220px;
+        height: auto;
+    }
+}
+
+/* =====================================================
+           تنسيق الموبايل (Mobile)
+        ===================================================== */
+@media (max-width: 768px) {
+
+    /* إخفاء القائمة الأصلية */
+    .nav-down {
+        display: none !important;
+    }
+
+    /* إظهار زر القائمة */
+    .menu-toggle {
+        display: block;
+        order: 1;
+    }
+
+    /* إظهار القائمة المنسدلة */
+    .mobile-menu {
+        display: block;
+    }
+
+    /* تعديل شريط التنقل العلوي */
+    .up-nav {
+        position: relative;
+        padding: 15px 0;
+    }
+
+    /* تنسيق الشعار للموبايل */
+    .logo-img {
+        width: 180px !important;
+        height: auto !important;
+        max-width: 180px;
+    }
+
+    /* تنسيق زر تسجيل الدخول للموبايل */
+    .login-btn {
+        font-size: 0.85rem;
+        padding: 10px 15px !important;
+        white-space: nowrap;
+    }
+
+    .login-btn i {
+        font-size: 0.8rem;
+    }
+
+    /* تحسين تنسيق القائمة المنسدلة للموبايل */
+    .mobile-menu ul li a {
+        padding: 15px 20px;
+        font-size: 1rem;
+    }
+
+    .mobile-menu ul li a i {
+        margin-left: 12px;
+        font-size: 1.1rem;
+    }
+}
+
+/* =====================================================
+           تنسيق الشاشات الصغيرة جداً
+        ===================================================== */
+@media (max-width: 480px) {
+    .up-nav {
+        padding: 10px 0;
+    }
+
+    .logo-img {
+        width: 150px !important;
+    }
+
+    .login-btn {
+        font-size: 0.8rem;
+        padding: 8px 12px !important;
+    }
+
+    .login-btn span {
+        display: none;
+    }
+/* 
+    .mobile-menu ul li a {
+        padding: 12px 15px;
+        font-size: 0.95rem;
+    } */
+}
+
+/* =====================================================
+           تنسيق للشاشات الكبيرة (حجم الشعار)
+        ===================================================== */
+@media (min-width: 1400px) {
+    .logo-img {
+        width: 250px;
+        height: 70px;
+    }
+}
+
+
+.fa-bars,
+.fa-navicon {
+    position: absolute;
+    left: 30px;
+    top: 20px;
+    font-size: 2rem;
+    color:var(--main-color);
+    padding: 10px;
+    box-shadow: 0 2px 8px rgba(98, 60, 60, 0.1);
+    z-index: 3000;
+    cursor: pointer;
+    border: none;
+    opacity: 1;
+    transition: background 0.2s, color 0.2s;
+}
+
+/* عند المرور بالماوس */
+.menu-toggle:hover,
+.fa-bars:hover,
+.fa-navicon:hover {
+    background: #007bff;
+    color: #fff;
+}
+
+/* تحسينات للهواتف */
+@media (max-width: 768px) {
+    .section-1 .head-section h3 {
+        font-size: 2rem;
+    }
+
+    .modal-image-container {
+        height: 250px;
+    }
+
+    .modal-nav-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,152 @@
+:root {
+    --dir: rtl;
+    --main-color: #0476bf;
+    --sub-color: #000;
+    --lineHight: 1.5;
+    --body-color: #fff;
+    --section-color: #f1f1f1;
+    --transition: .3s;
+    --border-radius: 20px;
+    --p-color: #6e6e6e;
+}
+
+* {
+    font-family: "Cairo", serif;
+    font-optical-sizing: auto;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+    position: relative;
+    direction: var(--dir);
+    background-color: var(--body-color) !important;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.body-color {
+    background-color: var(--body-color);
+}
+
+.white-text {
+    color: white;
+}
+
+.border-red {
+    border-radius: var(--border-radius);
+}
+
+.section-sub {
+    background-color: var(--section-color);
+}
+
+.main-color {
+    color: var(--main-color);
+}
+
+.sub-color {
+    color: var(--sub-color);
+}
+
+.p-color {
+    color: var(--p-color);
+}
+
+/*  scroll btn  */
+.scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--main-color);
+    color: white;
+    text-align: center;
+    border-radius: 50%;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+
+    /* الحركة السلسة */
+    opacity: 0;
+    /* الزر مخفي في البداية */
+    transform: translateY(50px);
+    /* تحريك الزر لأسفل */
+    transition: all 0.5s ease;
+    /* مدة الحركة والسرعة */
+    z-index: 1000;
+}
+
+/* عند ظهور الزر */
+.scroll-top.show {
+    opacity: 1;
+    /* يظهر الزر */
+    transform: translateY(0);
+    /* يعيد الزر إلى مكانه */
+}
+
+.scroll-top:hover {
+    background-color: var(--sub-color);
+}
+
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--main-color);
+    transition: var(--transition);
+}
+
+p {
+    line-height: var(--lineHight);
+    margin: 0;
+}
+
+@media (min-width: 1400px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 1120px;
+    }
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 .25rem rgb(4, 118, 191, .3);
+}
+
+#loader {
+    display: flex;
+    transition: opacity 0.5s ease;
+}
+
+#loader.hidden {
+    opacity: 0;
+    pointer-events: none;
+    display: none;
+}
+
+#loader .spinner-grow {
+    background-color: var(--main-color);
+}
+
+
+
+::selection {
+    color: var(--sub-color);
+    background-color: var(--main-color);
+}

@@ -1,0 +1,710 @@
+.btn {
+    color: var(--body-color);
+    background-color: var(--main-color);
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.btn::before {
+    border-radius: var(--border-radius);
+    background-color: var(--sub-color);
+}
+
+.head-section h3 {
+    width: fit-content;
+}
+
+.head-section h3::after {
+    position: absolute;
+    bottom: -10px;
+    right: 0;
+    width: 20px;
+    height: 5px;
+    transform: translateX(-70px);
+    background-color: var(--main-color);
+    content: "";
+    border-radius: var(--border-radius);
+}
+
+.head-section h3::before {
+    position: absolute;
+    bottom: -10px;
+    right: 0;
+    width: 65px;
+    height: 5px;
+    background-color: var(--main-color);
+    content: "";
+    border-radius: var(--border-radius);
+}
+
+/* start header */
+/* start nav  */
+
+
+/* nav up */
+
+nav .up-nav .btn:hover {
+    background-color: var(--main-color);
+    color: var(--sub-color);
+}
+
+/* nav-down */
+nav {
+    width: 100%;
+}
+
+
+nav .nav-down {
+    background-color: var(--body-color);
+    border-radius: var(--border-radius);
+    min-height: 55px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    /* لعرض العناصر أفقياً */
+    justify-content: center;
+    /* أو space-between */
+    align-items: center;
+}
+
+.nav-down ul {
+    min-height: 55px;
+}
+
+.nav-down li {
+    position: relative;
+}
+
+.nav-down li a {
+    color: var(--sub-color);
+    overflow: hidden;
+}
+
+.nav-down li a i {
+    margin-left: 4px;
+}
+
+.nav-down li a.active {
+    color: var(--main-color);
+}
+
+.nav-down li a.active::after {
+    content: "";
+    height: 2px;
+    background-color: var(--main-color);
+    position: absolute;
+    top: 0;
+    right: 30px;
+    width: 62%;
+    transform: rotate(-45deg);
+    transform-origin: top right;
+    border-radius: var(--border-radius);
+}
+
+
+
+.nav-down li a:hover {
+    color: var(--main-color);
+}
+
+/* end nav */
+header {
+    min-height: 600px;
+}
+
+header::after {
+    background-image: url(../img/s-1.jpg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    z-index: -1;
+}
+
+header .wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: var(--main-color);
+}
+
+header .wave .wave-svg {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+}
+
+/* service */
+.services {
+    padding: 5rem 0;
+    /* تم تقليل padding ليشبه قسم portfolio */
+    background: #fff;
+    /* إزالة التدرج ليتناسق مع portfolio */
+    position: relative;
+}
+
+.container {
+    max-width: 1200px;
+    /* توحيد العرض مع قسم portfolio */
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: var(--main-color);
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: #007bff;
+    /* لون قريب من لون الأسهم في قسم portfolio */
+    border-radius: 2px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    /* توحيد الفجوة مثل swiper-spacing */
+    margin-top: 3rem;
+}
+
+.service-card {
+    background: #fff;
+    padding: 2rem;
+    border: 2px solid #eee;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    position: relative;
+    height: 100%;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 1.5rem;
+    background: #f0f4ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem; /* كان 1.8rem */
+    color: var(--main-color);
+    box-shadow: inset 0 0 10px rgba(0, 123, 255, 0.1);
+}
+
+
+.service-card h3 {
+    font-size: 1.25rem;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.service-card p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+/* section 1 */
+.section-1 {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    margin: 20px 0;
+}
+
+.section-1 .head-section h3 {
+    color: var(--main-color);
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.section-1 .div-content {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.section-1 .div-content:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.section-1 .div-content:hover .div-text {
+    bottom: 0;
+    opacity: 1;
+}
+
+.section-1 .div-content:hover .div-img::after {
+    opacity: .5;
+}
+
+.section-1 img {
+    height: 300px;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.section-1 .div-content:hover img {
+    transform: scale(1.1);
+}
+
+.section-1 .div-img {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 280px;
+    /* زيادة ارتفاع الكارت */
+}
+
+.section-1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: var(--transition);
+    border-radius: inherit;
+    min-height: 280px;
+    max-height: 320px;
+}
+
+.section-1 .div-img::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    background: linear-gradient(45deg, var(--main-color), var(--sub-color));
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    transition: var(--transition);
+}
+
+.section-1 .div-text {
+    position: absolute;
+    bottom: -10px;
+    opacity: 0;
+    left: 0;
+    width: 100%;
+    height: fit-content;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    transition: var(--transition);
+}
+
+.section-1 .div-icon {
+    z-index: 4;
+    position: relative;
+}
+
+.section-1 .div-icon i {
+    font-size: 18px;
+    transform: translateY(5px) translateX(15px);
+    color: var(--body-color);
+    transition: var(--transition);
+}
+
+.section-1 .div-icon::after {
+    background: linear-gradient(45deg, var(--main-color), var(--sub-color));
+    width: 500%;
+    position: absolute;
+    top: -20px;
+    left: -35px;
+    transform: skew(-30deg);
+    height: 200%;
+    z-index: -1;
+    content: "";
+    transition: var(--transition);
+}
+
+.section-1 .swiper-button-prev,
+.section-1 .swiper-button-next {
+    background: var(--border-radius);
+    border: 2px solid var(--main-color);
+    border-radius: 50%;
+    padding: 15px;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    margin-top: -25px;
+    color: white; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px; 
+}
+
+
+.section-1 .swiper-button-prev {
+    top: 25px;
+    right: 95%;
+}
+
+.section-1 .swiper-button-next {
+    top: 25px;
+    right: 90%;
+}
+
+.section-1 .swiper-button-prev::after,
+.section-1 .swiper-button-next::after {
+    font-size: 20px;
+    font-weight: bold;
+    color:var(--main-color);
+}
+
+.border-red {
+    border-color: transparent !important;
+    /* أو يمكنك حذف البوردر نهائياً */
+    /* border: none !important; */
+}
+
+/* section 2 */
+.section-2 .div-img {
+    position: relative;
+}
+
+.section-2 .div-img::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 20%;
+    height: 110%;
+    background-color: var(--main-color);
+    z-index: -1;
+    border-radius: var(--border-radius);
+    transform: translate(-20px, -20px);
+    opacity: .8;
+}
+
+.section-2 .div-img img {
+    border-radius: var(--border-radius);
+}
+
+.section-2 .div-content-num {
+    background-color: var(--body-color);
+    min-height: 120px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    align-content: center;
+    box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
+    border-radius: var(--border-radius);
+    position: relative;
+    margin-top: 15px;
+    z-index: 1;
+}
+
+.section-2 .div-content-num::after {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(30%, -70%) rotate(45deg);
+    content: "";
+    background-color: var(--main-color);
+    width: 40px;
+    height: 40px;
+    opacity: .8;
+    z-index: -1;
+}
+
+/* section 3 */
+.section-3 {
+    min-height: 200px;
+    border-radius: var(--border-radius);
+}
+
+.section-3 .div-content h3 {
+    color: var(--body-color);
+}
+
+.section-3::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    background-color: var(--main-color);
+    opacity: .8;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: var(--border-radius);
+}
+
+.section-3::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    background-image: url(../img/pexels-fauxels-3183197.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    opacity: .5;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: var(--border-radius);
+}
+
+/* section 4 */
+
+.section-4 .icon-list li {
+    box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
+    padding: 15px;
+    border-radius: var(--border-radius);
+}
+
+.section-4 .row .div-content {
+    box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
+    border-radius: var(--border-radius);
+}
+
+/* section 5 */
+
+.section-5 .div-content {
+    margin-top: 25px;
+    background-color: var(--body-color);
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
+    transition: var(--transition);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    min-height: 150px;
+    padding: 15px;
+    transition: var(--transition);
+}
+
+.section-5 .div-content:hover {
+    transform: translateY(-20px);
+}
+
+.section-5 .div-content i {
+    color: var(--main-color);
+    font-size: 32px;
+    margin: 0px 15px;
+}
+
+.section-5 .img-div {
+    position: relative;
+    transition: var(--transition);
+    overflow: hidden;
+}
+
+.section-5 .img-div img {
+    width: 100%;
+    border-radius: var(--border-radius);
+}
+
+/* section 6 */
+.section-6 .accordion-button:focus {
+    background-color: var(--main-color);
+    box-shadow: var(--body-color);
+}
+
+.section-6 .accordion-button::after {
+    margin-right: auto;
+    margin-left: 0;
+}
+
+.section-6 .div-img {
+    position: relative;
+}
+
+/* .section-6 .div-img::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 20%;
+    height: 110%;
+    background-color: var(--main-color);
+    z-index: -1;
+    border-radius: var(--border-radius);
+    transform: translate(-20px, -20px);
+    opacity: .8;
+} */
+
+.section-6 .div-img img {
+    width: 100%;
+    border-radius: var(--border-radius);
+}
+
+/* start section 7 */
+.section-7 {
+    position: relative;
+}
+
+.section-7::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--section-color);
+    z-index: -4;
+}
+
+.section-7 .form-floating>label {
+    right: 0;
+}
+
+.section-7 .form-floating>.form-control-plaintext~label,
+.form-floating>.form-control:focus~label,
+.form-floating>.form-control:not(:placeholder-shown)~label,
+.form-floating>.form-select~label {
+    transform: scale(.85) translateY(-0.5rem) translateX(16%);
+}
+
+.section-7 .row .social-icon .icon {
+    width: 35px;
+    height: 35px;
+    color: var(--body-color);
+    border-radius: var(--border-radius);
+    background: var(--main-color);
+}
+
+.section-7 .row .social-icon a.text-p-a {
+    color: var(--sub-color);
+    transition: var(--transition);
+}
+
+.section-7 .row .social-icon a.text-p-a:hover {
+    color: var(--main-color);
+}
+
+.section-7 .btn:hover {
+    background-color: var(--main-color);
+}
+
+/* === تصغير زر ابدأ مشروعك والزر المجاور في الهيرو === */
+header .cta-buttons .btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    header .cta-buttons .btn {
+        padding: 8px 12px;
+        font-size: 0.95rem;
+    }
+}
+
+/* start footer */
+footer {
+    /* background-color: #263238; */
+    background-color: var(--body-color);
+}
+
+footer .icons-group {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+
+footer .icons-group a {
+    border-radius: var(--border-radius);
+    color: var(--body-color);
+    height: fit-content;
+    background-color: var(--sub-color);
+    transition: var(--transition);
+}
+
+footer .icons-group a:hover {
+    color: var(--main-color);
+}
+
+footer .icons-group a i {
+    font-size: 16px;
+    padding: 13px;
+}
+
+footer h4 {
+    color: var(--sub-color);
+}
+
+footer .div-content ul li {
+    padding: 5px 0;
+}
+
+footer .div-content ul li a {
+    color: var(--sub-color);
+    transition: var(--transition);
+}
+
+footer .div-content ul li a:hover {
+    color: var(--main-color);
+}
+
+footer .div-input-icon {
+    margin-top: 150px;
+    transform: translateY(-115px);
+}
+
+footer .div-input-icon i {
+    transform: translateX(30px);
+}
+
+footer .icons-group .hvr-bounce-to-bottom:before {
+    border-radius: var(--border-radius);
+}
+
+/* end footer */
+
+/* === تأثير hover جميل لزر الإرسال في نموذج التواصل (بدون أسود) === */
+.btnDiv .btn[type="submit"] {
+    background: linear-gradient(90deg, var(--main-color) 60%, #3db8ff 100%);
+    color: #fff;
+    border: none;
+    box-shadow: 0 2px 8px rgba(4, 118, 191, 0.08);
+    transition: all 0.3s cubic-bezier(.4,2,.3,1);
+}
+
+.btnDiv .btn[type="submit"]:hover, .btnDiv .btn[type="submit"]:focus {
+    background: linear-gradient(90deg, #3db8ff 0%, var(--main-color) 100%);
+    color: #fff;
+    transform: translateY(-3px) scale(1.04);
+    box-shadow: 0 8px 24px rgba(4, 118, 191, 0.18);
+    letter-spacing: 1px;
+}
+
