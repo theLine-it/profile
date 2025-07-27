@@ -2,7 +2,7 @@
     --dir: rtl;
     --main-color: #0476bf;
     --sub-color: #000;
-    --lineHight: 1.5;
+    --lineHight: 1.8;
     --body-color: #fff;
     --section-color: #f1f1f1;
     --transition: .3s;
@@ -149,4 +149,10 @@ p {
 ::selection {
     color: var(--sub-color);
     background-color: var(--main-color);
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
+    line-height: var(--lineHight);
+}
+.p{
+    line-height: var(--lineHight);
 }

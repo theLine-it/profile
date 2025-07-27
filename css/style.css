@@ -766,6 +766,7 @@ header .wave .wave-svg {
 }
 
 /* section 2 */
+
 .section-2 .div-img {
     position: relative;
 }
@@ -919,19 +920,7 @@ header .wave .wave-svg {
     position: relative;
 }
 
-/* .section-6 .div-img::after {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    width: 20%;
-    height: 110%;
-    background-color: var(--main-color);
-    z-index: -1;
-    border-radius: var(--border-radius);
-    transform: translate(-20px, -20px);
-    opacity: .8;
-} */
+
 
 .section-6 .div-img img {
     width: 100%;
