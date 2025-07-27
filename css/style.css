@@ -50,7 +50,18 @@ nav .up-nav .btn:hover {
 
 /* nav-down */
 nav {
+    padding: 10px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.733);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    right: 0;
     width: 100%;
+    z-index: 1000;
+    transition: var(--transition);
 }
 
 
@@ -107,15 +118,93 @@ nav .nav-down {
     border-radius: var(--border-radius);
 }
 
-
-
 .nav-down li a:hover {
     color: var(--main-color);
 }
 
+/* logo */
+.logo {
+    height: 70px;
+    transition: var(--transition);
+}
+
+.logo img {
+    height: 100%;
+    transition: var(--transition);
+}
+
+/* nav links */
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 30px;
+    position: relative;
+}
+
+.nav-links a {
+    color: var(--main-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a i {
+    margin-left: 5px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--sub-color);
+}
+
+.nav-links a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--sub-color);
+}
+
 /* end nav */
 header {
-    min-height: 600px;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(135deg, rgba(32, 201, 151, 0.85), rgba(8, 126, 225, 0.7)),
+        url("img/aboutus.jpg") no-repeat center center / cover;
+
+    color: white;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* لجعل المحتوى يتوسط عموديًا */
+    align-items: center;
+    /* لجعل المحتوى يتوسط أفقيًا */
+}
+
+
+/* Floating Animation */
+@keyframes floating {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 header::after {
@@ -144,6 +233,286 @@ header .wave .wave-svg {
     width: 100%;
     height: 100px;
 }
+
+/* menu */
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--main-color);
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100vh;
+    background-color: var(--main-color);
+    z-index: 1100;
+    transition: var(--transition);
+    padding: 20px;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.mobile-menu.active {
+    left: 0;
+    /* ← تظهر من اليسار */
+}
+
+.mobile-menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.close-menu-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.mobile-nav-links {
+    list-style: none;
+}
+
+.mobile-nav-links li {
+    margin-bottom: 20px;
+}
+
+.mobile-nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    transition: var(--transition);
+}
+
+.mobile-nav-links a i {
+    margin-left: 10px;
+}
+
+.mobile-nav-links a:hover {
+    color: var(--sub-color);
+    transform: translateX(-10px);
+}
+
+.mobile-nav-links a.active {
+    background-color: white;
+    /* خلفية العنصر */
+    color: var(--main-color);
+    /* لون الخط — تأكد من تعريف --main-color مسبقًا */
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 8px 12px;
+}
+
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1050;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+}
+
+.menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Hero Section */
+.hero-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 150px 10% 100px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    line-height: 1.3;
+    position: relative;
+    display: inline-block;
+}
+
+.hero-title span {
+    color: var(--sub-color);
+    position: relative;
+}
+
+.hero-title span::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--sub-color);
+    transform-origin: right;
+    animation: underlineGrow 1.5s ease-out forwards;
+}
+
+@keyframes underlineGrow {
+    0% {
+        transform: scaleX(0);
+    }
+
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 700px;
+    line-height: 1.8;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    padding-top: 40px;
+}
+
+.btn {
+    padding: 15px 30px;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn-primary {
+    background-color: var(--main-color);
+    color: white;
+    border: 2px solid var(--main-color);
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--main-color);
+}
+
+.btn-secondary {
+    background-color: var(--main-color);
+    color: white;
+    border: 2px solid var(--main-color);
+}
+
+.btn-secondary:hover {
+    background-color: transparent;
+    color: var(--main-color);
+}
+
+.btn i {
+    margin-left: 8px;
+}
+
+/* Floating Elements */
+.floating-elements {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.floating-element {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.1;
+    animation: floating 8s infinite ease-in-out;
+}
+
+.floating-element:nth-child(1) {
+    width: 100px;
+    height: 100px;
+    background-color: var(--sub-color);
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.floating-element:nth-child(2) {
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    top: 60%;
+    left: 80%;
+    animation-delay: 2s;
+}
+
+.floating-element:nth-child(3) {
+    width: 70px;
+    height: 70px;
+    background-color: var(--sub-color);
+    top: 75%;
+    left: 30%;
+    animation-delay: 4s;
+}
+
+/* Wave Animation */
+.wave-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wave-svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 100px;
+}
+
+.wave-path {
+    fill: var(--body-color);
+    animation: waveAnimation 8s linear infinite;
+}
+
+@keyframes waveAnimation {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
 
 /* service */
 .services {
@@ -217,7 +586,8 @@ header .wave .wave-svg {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1rem; /* كان 1.8rem */
+    font-size: 1rem;
+    /* كان 1.8rem */
     color: var(--main-color);
     box-shadow: inset 0 0 10px rgba(0, 123, 255, 0.1);
 }
@@ -365,11 +735,11 @@ header .wave .wave-svg {
     width: 40px;
     height: 40px;
     margin-top: -25px;
-    color: white; 
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 20px; 
+    font-size: 20px;
 }
 
 
@@ -387,7 +757,7 @@ header .wave .wave-svg {
 .section-1 .swiper-button-next::after {
     font-size: 20px;
     font-weight: bold;
-    color:var(--main-color);
+    color: var(--main-color);
 }
 
 .border-red {
@@ -697,10 +1067,11 @@ footer .icons-group .hvr-bounce-to-bottom:before {
     color: #fff;
     border: none;
     box-shadow: 0 2px 8px rgba(4, 118, 191, 0.08);
-    transition: all 0.3s cubic-bezier(.4,2,.3,1);
+    transition: all 0.3s cubic-bezier(.4, 2, .3, 1);
 }
 
-.btnDiv .btn[type="submit"]:hover, .btnDiv .btn[type="submit"]:focus {
+.btnDiv .btn[type="submit"]:hover,
+.btnDiv .btn[type="submit"]:focus {
     background: linear-gradient(90deg, #3db8ff 0%, var(--main-color) 100%);
     color: #fff;
     transform: translateY(-3px) scale(1.04);
@@ -708,3 +1079,96 @@ footer .icons-group .hvr-bounce-to-bottom:before {
     letter-spacing: 1px;
 }
 
+/* Scroll Indicator */
+.scroll-indicator {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.scroll-text {
+    margin-bottom: 10px;
+    font-size: 14px;
+    opacity: 0.8;
+    transition: var(--transition);
+}
+
+.scroll-indicator:hover .scroll-text {
+    opacity: 1;
+}
+
+.mouse {
+    width: 30px;
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 15px;
+    position: relative;
+}
+
+.mouse-wheel {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 8px;
+    background-color: white;
+    border-radius: 2px;
+    animation: wheelAnimation 2s infinite;
+}
+
+@keyframes wheelAnimation {
+    0% {
+        top: 10px;
+        opacity: 1;
+    }
+
+    50% {
+        top: 15px;
+        opacity: 0.8;
+    }
+
+    100% {
+        top: 10px;
+        opacity: 1;
+    }
+}
+
+.sticky-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.fa-bars, 
+.fa-navicon {
+    position: absolute;
+    left: 30px;
+    top: 20px;
+    font-size: 2rem;
+    color: var(--main-color);
+    padding: 10px;
+    box-shadow: 0 2px 8px rgba(98, 60, 60, 0.1);
+    z-index: 3000;
+    cursor: pointer;
+    border: none;
+    transition: background 0.2s, color 0.2s;
+}
+
+.menu-toggle:hover,
+.fa-bars:hover,
+.fa-navicon:hover {
+    background: #007bff;
+    color: #fff;
+}

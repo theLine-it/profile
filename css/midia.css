@@ -21,23 +21,17 @@
         margin: auto;
     }
 
-  
+
 }
 
-
-
-/*  mid */
-@media(min-width:992px) and (max-width: 1199px) {}
-
-/*  large */
-@media(min-width:1200px) {}
-
-
-
+/* =====================================================
+           تنسيق الشاشات الكبيرة (Desktop)
+        ===================================================== */
 @media (min-width: 1400px) {
 
+    /* إظهار القائمة الأصلية */
     nav .nav-down {
-        display: block;
+        display: block !important;
     }
 
     /*
@@ -58,30 +52,6 @@
     .container-xxl {
         max-width: 1120px;
     }
-}
-
-/* =====================================================
-           تنسيق القائمة الثابتة عند التمرير
-        ===================================================== */
-.sticky-menu {
-    position: fixed !important;
-    top: 0;
-    right: 0;
-    left: 0;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(15px);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-/* =====================================================
-           تنسيق الشاشات الكبيرة (Desktop)
-        ===================================================== */
-@media (min-width: 1400px) {
-
-    /* إظهار القائمة الأصلية */
-    nav .nav-down {
-        display: block !important;
-    }
 
     /* إخفاء زر القائمة */
     .menu-toggle {
@@ -91,6 +61,11 @@
     /* إخفاء القائمة المنسدلة */
     .mobile-menu {
         display: none !important;
+    }
+
+    .logo-img {
+        width: 250px;
+        height: 70px;
     }
 }
 
@@ -149,10 +124,11 @@
 
     /* تنسيق الشعار للموبايل */
     .logo-img {
-        width: 180px !important;
-        height: auto !important;
-        max-width: 180px;
+        width: 180px;
+        height: auto;
+        max-width: 100%;
     }
+
 
     /* تنسيق زر تسجيل الدخول للموبايل */
     .login-btn {
@@ -174,6 +150,53 @@
     .mobile-menu ul li a i {
         margin-left: 12px;
         font-size: 1.1rem;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero-content {
+        padding: 120px 5% 80px;
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .section-1 .head-section h3 {
+        font-size: 2rem;
+    }
+
+    .modal-image-container {
+        height: 250px;
+    }
+
+    .modal-nav-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
     }
 }
 
@@ -197,61 +220,40 @@
     .login-btn span {
         display: none;
     }
-/* 
-    .mobile-menu ul li a {
-        padding: 12px 15px;
-        font-size: 0.95rem;
-    } */
+
+
 }
 
 /* =====================================================
            تنسيق للشاشات الكبيرة (حجم الشعار)
         ===================================================== */
-@media (min-width: 1400px) {
-    .logo-img {
-        width: 250px;
-        height: 70px;
+
+/* تحسينات للهواتف */
+
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .hero-description {
+        font-size: 1.1rem;
+    }
+
+    .nav-links li {
+        margin-left: 20px;
     }
 }
 
 
-.fa-bars,
-.fa-navicon {
-    position: absolute;
-    left: 30px;
-    top: 20px;
-    font-size: 2rem;
-    color:var(--main-color);
-    padding: 10px;
-    box-shadow: 0 2px 8px rgba(98, 60, 60, 0.1);
-    z-index: 3000;
-    cursor: pointer;
-    border: none;
-    opacity: 1;
-    transition: background 0.2s, color 0.2s;
-}
 
-/* عند المرور بالماوس */
-.menu-toggle:hover,
-.fa-bars:hover,
-.fa-navicon:hover {
-    background: #007bff;
-    color: #fff;
-}
-
-/* تحسينات للهواتف */
-@media (max-width: 768px) {
-    .section-1 .head-section h3 {
+@media (max-width: 576px) {
+    .hero-title {
         font-size: 2rem;
     }
 
-    .modal-image-container {
-        height: 250px;
-    }
-
-    .modal-nav-btn {
-        width: 40px;
-        height: 40px;
-        font-size: 16px;
+    .hero-description {
+        font-size: 1rem;
     }
 }
