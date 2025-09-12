@@ -1,13 +1,24 @@
 :root {
     --dir: rtl;
+    /* Colors */
     --main-color: #0476bf;
-    --sub-color: #000;
-    --lineHight: 1.8;
+    --secondary-color: #198754;
+    --sub-color: var(--secondary-color);
+    --text-dark: #333;
+    --text-light: #fff;
+    --p-color: #6e6e6e;
     --body-color: #fff;
     --section-color: #f1f1f1;
+    --bg-light: #f7fafd;
+    --bg-gradient: linear-gradient(135deg, #e3f0ff 0%, #f9fcff 100%);
+
+    /* Layout */
+    --line-height: 1.8;
+    --border-radius: 18px;
+
+    /* Effects */
     --transition: .3s;
-    --border-radius: 20px;
-    --p-color: #6e6e6e;
+    --shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.07);
 }
 
 * {
@@ -25,6 +36,7 @@ body {
     position: relative;
     direction: var(--dir);
     background-color: var(--body-color) !important;
+    color: var(--text-dark);
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
@@ -111,6 +123,7 @@ a {
 p {
     line-height: var(--lineHight);
     margin: 0;
+    color: var(--text-dark);
 }
 
 @media (min-width: 1400px) {
@@ -150,9 +163,45 @@ p {
     color: var(--sub-color);
     background-color: var(--main-color);
 }
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: var(--lineHight);
+    color: var(--text-dark);
+}
+
+.p {
     line-height: var(--lineHight);
 }
-.p{
-    line-height: var(--lineHight);
+
+/* Scroll Animation Styles */
+.animate-on-scroll {
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-on-scroll.animate__animated {
+    opacity: 1 !important;
+}
+
+/* Custom animation delays */
+.animate__delay-1s {
+    animation-delay: 1s;
+}
+
+.animate__delay-2s {
+    animation-delay: 2s;
+}
+
+.animate__delay-3s {
+    animation-delay: 3s;
 }
