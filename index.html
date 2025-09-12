@@ -20,21 +20,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
     <!--  hover css  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover.css">
-
     <!--  bootstrap links  -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-
     <!-- wow -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <!-- swiper -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
+    <!-- AOS ANIMATION -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!--  my css file  -->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/midia.css">
-
-
 </head>
 
 <body>
@@ -56,21 +53,19 @@
             <a href="#" class="logo">
                 <img src="img/The Line-18.png" alt="شعار الشركة - حلول برمجية مبتكرة بألوان زرقاء وبيضاء">
             </a>
-
             <ul class="nav-links">
                 <li><a href="#home" class="active"><i class="fas fa-home"></i> الرئيسية</a></li>
                 <li><a href="#about-us"><i class="fas fa-users"></i> من نحن</a></li>
                 <li><a href="#services"><i class="fas fa-laptop-code"></i> خدماتنا</a></li>
                 <li><a href="#features"><i class="fas fa-star"></i> مميزاتنا</a></li>
+                <li><a href="subscription.html"><i class="fas fa-id-card"></i>الباقات</a></li>
                 <li><a href="#questions"><i class="fas fa-question-circle"></i> الأسئلة الشائعة</a></li>
                 <li><a href="#contact-us"><i class="fas fa-phone-alt"></i> اتصل بنا</a></li>
             </ul>
-
             <button class="mobile-menu-btn" id="mobileMenuBtn">
                 <i class="fas fa-bars"></i>
             </button>
         </nav>
-
         <!-- Mobile Menu -->
         <div class="mobile-menu" id="mobileMenu">
             <div class="mobile-menu-header">
@@ -82,20 +77,21 @@
                     <i class="fas fa-times"></i>
                 </button>
             </div>
-
             <ul class="mobile-nav-links">
                 <li><a href="#home" class="active"><i class="fas fa-home"></i> الرئيسية</a></li>
                 <li><a href="#about-us"><i class="fas fa-users"></i> من نحن</a></li>
                 <li><a href="#services"><i class="fas fa-laptop-code"></i> خدماتنا</a></li>
                 <li><a href="#features"><i class="fas fa-star"></i> مميزاتنا</a></li>
+                <li><a href="subscription.html"><i class="fas fa-id-card"></i> الباقات</a></li>
                 <li><a href="#questions"><i class="fas fa-question-circle"></i> الأسئلة الشائعة</a></li>
                 <li><a href="#contact-us"><i class="fas fa-phone-alt"></i> اتصل بنا</a></li>
             </ul>
         </div>
-
+        <img src="img/aboutus.jpg" alt="خلفية - عن الشركة" class="header-bg">
+        <div class="overlay"></div>
         <!-- end nav  -->
         <div class="container mt-5">
-            <div class="div-content mt-5">
+            <div class="div-content mt-5" data-aos="fade-down" data-aos-delay="300">
                 <div class="row justify-content-center align-items-center mt-5">
                     <div class="col-md-12 col-sm-12 mt-3 align-items-center overflow-hidden header-text">
                         <h2 class="fw-bold main-color my-4">
@@ -143,7 +139,7 @@
     </header>
     <!-- end header -->
     <!-- start section 2 about -->
-    <section class="section-2 py-5" id="about-us">
+    <section class="section-2 py-5" id="about-us" data-aos="fade-up">
         <div class="container  position-relative">
             <div class="head-section w-100 text-end">
                 <h3 class="fw-bold main-color position-relative">
@@ -151,18 +147,15 @@
                 </h3>
             </div>
             <div class="row justify-content-center align-items-center mt-5">
-                <div class="col-md-6 col-sm-12">
+                <div class="col-md-6 col-sm-12" data-aos="fade-right" data-aos-delay="200">
                     <div class="div-content">
                         <div class="div-text">
                             <h5>
-
-
                                 The Line هي شركة فلسطينية رائدة في مجال تكنولوجيا المعلومات، تقدم حلولًا ذكية ومبتكرة في
                                 تطوير المواقع، الأنظمة البرمجية، وتطبيقات الويب.
                                 فريقنا يتكون من مهندسين ومبرمجين محترفين يسعون دائمًا لصناعة تجارب رقمية فريدة تُسهم في
                                 تطوير الأعمال، وتحقيق أهداف العملاء بكل دقة ومرونة.
                             </h5>
-
                             <div class="row justify-content-center align-items-start mt-5">
                                 <div class="col-md-6 col-sm-12">
                                     <div class="div-content-num">
@@ -194,7 +187,6 @@
                                         </p>
                                     </div>
                                 </div>
-
                                 <div class="col-md-6 col-sm-12">
                                     <div class="div-content-num">
                                         <div class="div-num cont" title="number" data-target="4">
@@ -208,7 +200,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-sm-12 ">
+                <div class="col-md-6 col-sm-12 " data-aos="fade-left" data-aos-delay="400">
                     <div class="div-img">
                         <img src="img/hero1.jpg" loading="lazy" alt="img" width="100%" height="350px">
                     </div>
@@ -217,19 +209,17 @@
         </div>
     </section>
     <!-- start service -->
-    <section class="services py-5 position-relative" id="services">
+    <section class="services py-5 position-relative" id="services" data-aos="fade-up">
         <div class="container position-relative">
             <div class="head-section w-100 text-center">
                 <h3 class="fw-bold main-color position-relative">
-
                     خدماتنا المميزة</h3>
             </div>
-
             <div class="row justify-content-center align-items-center mt-5">
                 <div class="col-12">
                     <div class="row gy-4 gx-4">
                         <!-- الخدمة 1 -->
-                        <div class="col-md-6 col-lg-4">
+                        <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
                             <div class="service-card p-4 border h-100 text-center">
                                 <div class="service-icon mb-3">
                                     <i class="fas fa-laptop-code fa-2x"></i>
@@ -239,9 +229,8 @@
                                     مستخدم سهلة.</p>
                             </div>
                         </div>
-
                         <!-- الخدمة 2 -->
-                        <div class="col-md-6 col-lg-4">
+                        <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
                             <div class="service-card p-4 border h-100 text-center">
                                 <div class="service-icon mb-3">
                                     <i class="fas fa-cogs fa-2x"></i>
@@ -251,9 +240,8 @@
                                     أحدث التقنيات.</p>
                             </div>
                         </div>
-
                         <!-- الخدمة 3 -->
-                        <div class="col-md-6 col-lg-4">
+                        <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="300">
                             <div class="service-card p-4 border h-100 text-center">
                                 <div class="service-icon mb-3">
                                     <i class="fas fa-project-diagram fa-2x"></i>
@@ -263,9 +251,8 @@
                                     بين فرق العمل.</p>
                             </div>
                         </div>
-
                         <!-- الخدمة 4 -->
-                        <div class="col-md-6 col-lg-4">
+                        <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="400">
                             <div class="service-card p-4 border h-100 text-center">
                                 <div class="service-icon mb-3">
                                     <i class="fas fa-chalkboard-teacher fa-2x"></i>
@@ -275,9 +262,8 @@
                                     لمشروعك.</p>
                             </div>
                         </div>
-
                         <!-- الخدمة 5 -->
-                        <div class="col-md-6 col-lg-4">
+                        <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="500">
                             <div class="service-card p-4 border h-100 text-center">
                                 <div class="service-icon mb-3">
                                     <i class="fas fa-tachometer-alt fa-2x"></i>
@@ -287,9 +273,8 @@
                                     لتتوافق مع المعايير الحديثة وتحقق أفضل نتائج.</p>
                             </div>
                         </div>
-
                         <!-- الخدمة 6 -->
-                        <div class="col-md-6 col-lg-4">
+                        <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="600">
                             <div class="service-card p-4 border h-100 text-center">
                                 <div class="service-icon mb-3">
                                     <i class="fas fa-plug fa-2x"></i>
@@ -302,28 +287,23 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
-
     <!-- start section 1 services -->
-    <section class="section-1 py-5 position-relative" id="portfolio">
+    <section class="section-1 py-5 position-relative" id="portfolio" data-aos="fade-up">
         <div class="container position-relative">
             <div class="head-section w-100 text-center ">
                 <h3 class="fw-bold main-color position-relative">
-
                     اعمالنا الاحترافية
                 </h3>
-
             </div>
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
-
             <div class="row justify-content-center align-items-center mt-5">
                 <div class="swiper portfolio-swiper">
                     <div class="swiper-wrapper">
                         <!-- خدمة إدارة المخزون الذكي -->
-                        <div class="swiper-slide">
+                        <div class="swiper-slide" data-aos="fade-up" data-aos-delay="100">
                             <div class="col-12 mt-5">
                                 <div class="div-content position-relative border-red" data-service="inventory"
                                     data-bs-toggle="modal" data-bs-target="#serviceModal">
@@ -334,7 +314,6 @@
                                     <div class="div-text p-3 overflow-hidden d-flex justify-content-between">
                                         <h4 class="fw-bold body-color-text">
                                             أكاديمية للتعليم عن بُعد
-
                                         </h4>
                                         <div class="div-icon position-relative">
                                             <i class="fa-solid fa-arrow-left"></i>
@@ -343,9 +322,8 @@
                                 </div>
                             </div>
                         </div>
-
                         <!-- خدمة الفواتير والمحاسبة -->
-                        <div class="swiper-slide">
+                        <div class="swiper-slide" data-aos="fade-up" data-aos-delay="200">
                             <div class="col-12 mt-5">
                                 <div class="div-content position-relative border-red" data-service="accounting"
                                     data-bs-toggle="modal" data-bs-target="#serviceModal">
@@ -364,9 +342,8 @@
                                 </div>
                             </div>
                         </div>
-
                         <!-- خدمة التقارير والتحليلات -->
-                        <div class="swiper-slide">
+                        <div class="swiper-slide" data-aos="fade-up" data-aos-delay="300">
                             <div class="col-12 mt-5">
                                 <div class="div-content position-relative border-red" data-service="reports"
                                     data-bs-toggle="modal" data-bs-target="#serviceModal">
@@ -385,9 +362,8 @@
                                 </div>
                             </div>
                         </div>
-
                         <!-- الخدمة المخصصة -->
-                        <div class="swiper-slide">
+                        <div class="swiper-slide" data-aos="fade-up" data-aos-delay="400">
                             <div class="col-12 mt-5">
                                 <div class="div-content position-relative border-red" data-service="custom"
                                     data-bs-toggle="modal" data-bs-target="#serviceModal">
@@ -406,7 +382,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide" data-aos="fade-up" data-aos-delay="500">
                             <div class="col-12 mt-5">
                                 <div class="div-content position-relative border-red" data-service="custom"
                                     data-bs-toggle="modal" data-bs-target="#serviceModal">
@@ -425,7 +401,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide" data-aos="fade-up" data-aos-delay="600">
                             <div class="col-12 mt-5">
                                 <div class="div-content position-relative border-red" data-service="custom"
                                     data-bs-toggle="modal" data-bs-target="#serviceModal">
@@ -436,7 +412,6 @@
                                     <div class="div-text p-3 overflow-hidden d-flex justify-content-between">
                                         <h4 class="fw-bold body-color-text">
                                             تجربة مستخدم محسّنة لأداء أفضل
-
                                         </h4>
                                         <div class="div-icon position-relative">
                                             <i class="fa-solid fa-arrow-left"></i>
@@ -446,25 +421,21 @@
                             </div>
                         </div>
                     </div>
-
-
                 </div>
             </div>
         </div>
     </section>
     <!-- end section 1 services -->
-
     <!--section 3  -->
-    <section class="section-3 py-5 position-relative">
+    <section class="section-3 py-5 position-relative" data-aos="fade-up" data-aos-delay="200">
         <div class="div-content text-center w-75  mx-auto py-5">
             <h3 class="fw-bold position-relative fade-in">
-
                 نقدم الخدمات والحلول الالزمة في جميع ظروف العمل
             </h3>
         </div>
     </section>
     <!-- section 4 -->
-    <section class="section-4 py-5">
+    <section class="section-4 py-5" data-aos="fade-up">
         <div class="container  position-relative">
             <div class="head-section w-100 text-end">
                 <h3 class="fw-bold main-color position-relative">
@@ -472,7 +443,7 @@
                 </h3>
             </div>
             <div class="row justify-content-center align-items-center mt-5">
-                <div class="col-md-4 col-sm-12 mt-3">
+                <div class="col-md-4 col-sm-12 mt-3" data-aos="fade-up" data-aos-delay="100">
                     <div class="div-content p-3 d-flex align-items-center">
                         <img src="img/html.png" alt="img" loading="lazy" title="html" width="100px" height="90px">
                         <div class="text-div pe-5">
@@ -483,7 +454,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-12 mt-3">
+                <div class="col-md-4 col-sm-12 mt-3" data-aos="fade-up" data-aos-delay="200">
                     <div class="div-content p-3 d-flex align-items-center">
                         <img src="img/css.png" alt="img" loading="lazy" title="html" width="100px" height="90px">
                         <div class="text-div pe-5">
@@ -494,7 +465,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-12 mt-3">
+                <div class="col-md-4 col-sm-12 mt-3" data-aos="fade-up" data-aos-delay="300">
                     <div class="div-content p-3 d-flex align-items-center">
                         <img src="img/js-2.png" alt="img" loading="lazy" title="html" width="100px" height="90px">
                         <div class="text-div pe-5">
@@ -505,7 +476,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-12 mt-3">
+                <div class="col-md-4 col-sm-12 mt-3" data-aos="fade-up" data-aos-delay="400">
                     <div class="div-content p-3 d-flex align-items-center">
                         <img src="img/boot.webp" alt="img" loading="lazy" title="html" width="100px" height="90px">
                         <div class="text-div pe-5">
@@ -516,7 +487,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-12 mt-3">
+                <div class="col-md-4 col-sm-12 mt-3" data-aos="fade-up" data-aos-delay="500">
                     <div class="div-content p-3 d-flex align-items-center">
                         <img src="img/jquery.png" alt="img" loading="lazy" title="html" width="100px" height="90px">
                         <div class="text-div pe-5">
@@ -527,7 +498,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-12 mt-3">
+                <div class="col-md-4 col-sm-12 mt-3" data-aos="fade-up" data-aos-delay="600">
                     <div class="div-content p-3 d-flex align-items-center">
                         <img src="img/php.png" alt="img" loading="lazy" title="html" width="100px" height="90px">
                         <div class="text-div pe-5">
@@ -538,7 +509,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-12 mt-3">
+                <div class="col-md-4 col-sm-12 mt-3" data-aos="fade-up" data-aos-delay="700">
                     <div class="div-content p-3 d-flex align-items-center">
                         <img src="img/laravel.png" alt="img" loading="lazy" title="html" width="100px" height="90px">
                         <div class="text-div pe-5">
@@ -549,7 +520,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-12 mt-3">
+                <div class="col-md-4 col-sm-12 mt-3" data-aos="fade-up" data-aos-delay="800">
                     <div class="div-content p-3 d-flex align-items-center">
                         <img src="img/sql.png" alt="img" loading="lazy" title="html" width="100px" height="90px">
                         <div class="text-div pe-5">
@@ -560,7 +531,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-12 mt-3">
+                <div class="col-md-4 col-sm-12 mt-3" data-aos="fade-up" data-aos-delay="900">
                     <div class="div-content p-3 d-flex align-items-center">
                         <img src="img/font.webp" alt="img" loading="lazy" title="html" width="100px" height="90px">
                         <div class="text-div pe-5">
@@ -575,7 +546,7 @@
         </div>
     </section>
     <!-- section 5 -->
-    <section class="section-5 py-5" id="features">
+    <section class="section-5 py-5" id="features" data-aos="fade-up">
         <div class="container  position-relative">
             <div class="head-section w-100 text-center">
                 <h3 class="fw-bold main-color position-relative">
@@ -586,17 +557,16 @@
                 <div class="col-md-12 col-sm-12 mt-3">
                     <div class="row justify-content-center align-items-center">
                         <!-- صورة -->
-                        <div class="col-md-5 col-sm-12 mt-2">
+                        <div class="col-md-5 col-sm-12 mt-2" data-aos="fade-right" data-aos-delay="200">
                             <div class="img-div">
                                 <img src="img/section-5.png" loading="lazy" alt="img" title="مميزات البرنامج">
                             </div>
                         </div>
-
                         <!-- مميزات -->
                         <div class="col-md-7 col-sm-12 mt-2">
                             <div class="row">
                                 <!-- بناء قاعدة بيانات -->
-                                <div class="col-md-6 col-sm-12">
+                                <div class="col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="300">
                                     <div class="div-content">
                                         <i class="fa-solid fa-database"></i>
                                         <div class="text-div">
@@ -606,9 +576,8 @@
                                         </div>
                                     </div>
                                 </div>
-
                                 <!-- سهولة الاستخدام -->
-                                <div class="col-md-6 col-sm-12">
+                                <div class="col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="400">
                                     <div class="div-content">
                                         <i class="fa-solid fa-arrow-pointer"></i>
                                         <div class="text-div">
@@ -618,9 +587,8 @@
                                         </div>
                                     </div>
                                 </div>
-
                                 <!-- لوحة تحكم متكاملة -->
-                                <div class="col-md-12 col-sm-12">
+                                <div class="col-md-12 col-sm-12" data-aos="fade-up" data-aos-delay="500">
                                     <div class="div-content">
                                         <i class="fa-solid fa-chart-pie"></i>
                                         <div class="text-div">
@@ -630,9 +598,8 @@
                                         </div>
                                     </div>
                                 </div>
-
                                 <!-- الأمان -->
-                                <div class="col-md-12 col-sm-12">
+                                <div class="col-md-12 col-sm-12" data-aos="fade-up" data-aos-delay="600">
                                     <div class="div-content">
                                         <i class="fa-solid fa-lock"></i>
                                         <div class="text-div">
@@ -642,9 +609,8 @@
                                         </div>
                                     </div>
                                 </div>
-
                                 <!-- مرونة التخصيص -->
-                                <div class="col-md-12 col-sm-12">
+                                <div class="col-md-12 col-sm-12" data-aos="fade-up" data-aos-delay="700">
                                     <div class="div-content">
                                         <i class="fa-solid fa-gears"></i>
                                         <div class="text-div">
@@ -654,9 +620,8 @@
                                         </div>
                                     </div>
                                 </div>
-
                                 <!-- دعم فني دائم -->
-                                <div class="col-md-12 col-sm-12">
+                                <div class="col-md-12 col-sm-12" data-aos="fade-up" data-aos-delay="800">
                                     <div class="div-content">
                                         <i class="fa-solid fa-headset"></i>
                                         <div class="text-div">
@@ -666,17 +631,15 @@
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
     <!-- section 6 -->
-    <section class="section-6 py-5" id="questions">
+    <section class="section-6 py-5" id="questions" data-aos="fade-up">
         <div class="container  position-relative">
             <div class="head-section w-100 text-center">
                 <h3 class="fw-bold main-color position-relative">
@@ -684,9 +647,8 @@
                 </h3>
             </div>
             <div class="row mt-5 justify-content-center align-items-center">
-                <div class="col-md-8 col-sm-12">
+                <div class="col-md-8 col-sm-12" data-aos="fade-right" data-aos-delay="200">
                     <div class="accordion" id="accordionExample">
-
                         <!-- سؤال 1 -->
                         <div class="accordion-item">
                             <h2 class="accordion-header">
@@ -703,7 +665,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <!-- سؤال 2 -->
                         <div class="accordion-item">
                             <h2 class="accordion-header">
@@ -721,7 +682,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <!-- سؤال 3 -->
                         <div class="accordion-item">
                             <h2 class="accordion-header">
@@ -739,7 +699,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <!-- سؤال 4 -->
                         <div class="accordion-item">
                             <h2 class="accordion-header">
@@ -757,7 +716,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <!-- سؤال 5 -->
                         <div class="accordion-item">
                             <h2 class="accordion-header">
@@ -775,7 +733,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <!-- سؤال 6 -->
                         <div class="accordion-item">
                             <h2 class="accordion-header">
@@ -792,23 +749,19 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
-
                 <!-- صورة جانبية -->
-                <div class="col-md-4 col-sm-12">
+                <div class="col-md-4 col-sm-12" data-aos="fade-left" data-aos-delay="400">
                     <div class="div-img text-start">
                         <img src="img/undraw_my-notifications_p6to.png" loading="lazy" alt="img">
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
     <!-- start section 6 -->
-    <section class=" section-7 py-5" id="contact-us">
-
+    <section class=" section-7 py-5" id="contact-us" data-aos="fade-up">
         <div class="container">
             <div class="head-section w-100 text-center">
                 <h3 class="fw-bold main-color position-relative">
@@ -816,7 +769,7 @@
                 </h3>
             </div>
             <div class="row justify-content-center align-items-start py-5 mt-5">
-                <div class="col-md-4 col-sm-12 mt-sm-3">
+                <div class="col-md-4 col-sm-12 mt-sm-3" data-aos="fade-right" data-aos-delay="200">
                     <div class="row">
                         <div class="col-12">
                             <h4 class="mt-2"> من خلال ارقام التواصل </h4>
@@ -830,10 +783,8 @@
                                     </a>
                                 </div>
                             </div>
-
                         </div>
                     </div>
-
                     <div class="row">
                         <div class="col-12">
                             <div class="social-icon">
@@ -848,9 +799,6 @@
                             </div>
                         </div>
                     </div>
-
-
-
                     <div class="row">
                         <div class="col-12">
                             <h4 class="mt-2"> من خلال البريد الالكتروني </h4>
@@ -866,16 +814,14 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
-                <div class="col-md-8 col-sm-12 mt-sm-3">
+                <div class="col-md-8 col-sm-12 mt-sm-3" data-aos="fade-left" data-aos-delay="400">
                     <form id="contact-form" method="POST" action="https://formsubmit.co/theline.it@gmail.com">
                         <input type="hidden" name="_captcha" value="false">
                         <!-- رسائل النجاح -->
                         <div id="success-alert" class="alert alert-success d-none mt-4" role="alert">
                             تم الإرسال بنجاح، شكرًا لتواصلك معنا!
                         </div>
-
                         <!-- الاسم الكامل -->
                         <div class="d-flex justify-content-between w-100">
                             <div class="form-floating mb-3 w-100 ms-3">
@@ -889,28 +835,24 @@
                                 <label for="last_name">الاسم الاخير :</label>
                             </div>
                         </div>
-
                         <!-- رقم الهاتف -->
                         <div class="form-floating mb-3 w-100 ms-3">
                             <input type="text" class="form-control" name="رقم_الهاتف" id="phone"
                                 placeholder="رقم الهاتف" required>
                             <label for="phone">رقم الهاتف :</label>
                         </div>
-
                         <!-- البريد الإلكتروني -->
                         <div class="form-floating mb-3 w-100 ms-3">
                             <input type="email" class="form-control" name="البريد_الإلكتروني" id="email"
                                 placeholder="example@gmail.com" required>
                             <label for="email">البريد الالكتروني :</label>
                         </div>
-
                         <!-- الملاحظات / الرسالة -->
                         <div class="form-floating">
                             <textarea class="form-control" name="الرسالة" id="notes" placeholder="ملاحظات"
                                 style="height: 200px" required></textarea>
                             <label for="notes">ملاحظات</label>
                         </div>
-
                         <!-- زر الإرسال -->
                         <div class="btnDiv pt-5">
                             <button type="submit" class="btn py-3 px-4 fw-bold hvr-underline-from-right">
@@ -918,20 +860,16 @@
                             </button>
                         </div>
                     </form>
-
                 </div>
-
             </div>
         </div>
     </section>
     <!-- end section 6 -->
-
-
     <!-- start footer -->
-    <footer class="py-5">
+    <footer class="py-5" data-aos="fade-up">
         <div class="container">
             <div class="row justify-content-center align-items-center">
-                <div class="col-md-5 col-sm-12 mt-sm-3">
+                <div class="col-md-5 col-sm-12 mt-sm-3" data-aos="fade-right" data-aos-delay="200">
                     <div class="div-content">
                         <div class="div-img mb-3">
                             <img src="img/The Line-18.png" loading="lazy" alt="logo" width="200px">
@@ -952,7 +890,7 @@
                 </div>
                 <div class="col-md-7 col-sm-12 mt-5 mt-lg-0">
                     <div class="row d-flex justify-content-between align-items-center">
-                        <div class="col-md-4 col-sm-12">
+                        <div class="col-md-4 col-sm-12" data-aos="fade-up" data-aos-delay="300">
                             <div class="div-content">
                                 <h4 class="fw-bold mb-4">الشركة</h4>
                                 <ul>
@@ -963,7 +901,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-md-4 col-sm-12 mt-5 mt-lg-0">
+                        <div class="col-md-4 col-sm-12 mt-5 mt-lg-0" data-aos="fade-up" data-aos-delay="400">
                             <div class="div-content">
                                 <h4 class="fw-bold mb-4">الدعم الفني</h4>
                                 <ul>
@@ -974,7 +912,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-md-4 col-sm-12 mt-5 mt-lg-0">
+                        <div class="col-md-4 col-sm-12 mt-5 mt-lg-0" data-aos="fade-up" data-aos-delay="500">
                             <div class="div-content">
                                 <h4 class="fw-bold mt-2">ابقى على تواصل</h4>
                                 <div class="div-input-icon d-flex justify-content-between align-items-center">
@@ -989,18 +927,23 @@
         </div>
     </footer>
     <!-- end footer -->
-
-
-
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
-    </script>
-
+        </script>
     <!-- swiper js -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-
-
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100,
+            easing: 'ease-in-out-sine'
+        });
+    </script>
     <script src="js/main.js"></script>
 </body>
+
+</html>

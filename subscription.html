@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content=" the line شركة متخصصة في تصميم وتطوير مواقع الويب وتطبيقات الموبايل. بخبرة تتجاوز 10 سنوات، نقدم حلول برمجية متكاملة وتصميمات عصرية تلبي احتياجات عملائنا بتميز وإبداع.">
+    <meta name="keywords"
+        content="تصميم مواقع ويب حديثة, تطوير مواقع ويب, تصميم ويب متجاوب, برمجة ويب احترافية, خدمات الاستضافة, برنامج إدارة المولدات, نظام إدارة المتاجر البصرية, تصميم مواقع إخبارية, تحسين محركات البحث, تحسين تجربة المستخدم">
+    <!-- Favicon بأحجام مختلفة -->
+    <link rel="icon" type="image/png" sizes="32x32" href="img/The Line-18.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/The Line-18.png">
+    <title>The line</title>
+    <!--  font awesome link  -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <!--  google font links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+    <!--  hover css  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover.css">
+    <!--  bootstrap links  -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- wow -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- AOS ANIMATION -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!--  my css file  -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/midia.css">
+    <link rel="stylesheet" href="css/subscripe.css">
+</head>
+
+
+<body>
+
+    <!-- Loader -->
+    <div id="loader"
+        class="d-flex justify-content-center align-items-center position-fixed top-0 start-0 w-100 h-100 bg-white"
+        style="z-index: 9999;">
+        <div class="text-center">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <p class="mt-3 fw-bold">جاري التحميل...</p>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav id="navbar">
+        <a href="#" class="logo">
+            <img src="img/The Line-18.png" alt="شعار الشركة - حلول برمجية مبتكرة بألوان زرقاء وبيضاء">
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="index.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+            <li><a href="#plans" class="active"><i class="fas fa-id-card"></i>الباقات</a></li>
+            <li><a href="#services"><i class="fas fa-laptop-code"></i> خدماتنا</a></li>
+            <li><a href="#why-choose"><i class="fas fa-star"></i> مميزاتنا</a></li>
+            <li><a href="#contact-us"><i class="fas fa-phone-alt"></i> اتصل بنا</a></li>
+        </ul>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <a href="#" class="logo">
+                <img src="img/The Line-18.png" loading="lazy" alt="شعار الشركة للجوّال - نسخة مصغرة من الشعار الرئيسي">
+            </a>
+            <button class="close-menu-btn" id="closeMenuBtn">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <ul class="mobile-nav-links">
+            <li><a href="index.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+            <li><a href="#plans" class="active"><i class="fas fa-id-card"></i>الباقات</a></li>
+            <li><a href="#services"><i class="fas fa-laptop-code"></i> خدماتنا</a></li>
+            <li><a href="#why-choose"><i class="fas fa-star"></i> مميزاتنا</a></li>
+            <li><a href="#contact-us"><i class="fas fa-phone-alt"></i> اتصل بنا</a></li>
+        </ul>
+    </div>
+    <!-- Hero Section -->
+    <section class="hero-section" id="home" data-aos="fade-down" data-aos-delay="300">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-container">
+                <div class="hero-image">
+                    <img src="img/sub3.jpg" alt="امرأة تستخدم الهاتف مع رسم بياني">
+                </div>
+                <div class="hero-content">
+                    <h1 class="animate__animated animate__fadeInRight">باقات تناسب احتياجك وتضمن نموّك</h1>
+                    <p class="animate__animated animate__fadeInRight animate__delay-1s">
+                        معنا، تقدر تبدأ تجارتك، تكبرها، وتوصِل لطموحك! اختر الخطة اللي تناسبك واستفيد من كل الأدوات اللي
+                        تحتاجها بمكان واحد.
+                    </p>
+
+                    <a href="#plans" class="btn btn-primary animate__animated animate__fadeInLeft animate__delay-2s">
+                        <i class="fas fa-tags"></i>
+                        اكتشف الباقات
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- باقات الاشتراك -->
+    <main class="container my-5" >
+        <section id="plans" class="plans-section"  data-aos="fade-up">
+            <h2 class="text-center mb-5 fw-bold" style="color: var(--primary-color);">باقات تصميم وتطوير المواقع</h2>
+            <div class="row justify-content-center">
+                <!-- الباقة الأساسية -->
+                <div class="col-md-4 mb-4"  data-aos="zoom-in" data-aos-delay="100">
+                    <div class="card h-100 shadow-sm border-0 animate__animated animate__fadeInUp">
+                        <div class="card-body text-center">
+                            <div class="plan-icon mb-3"><i class="fa-solid fa-bolt text-info"></i></div>
+                            <h3 class="card-title fw-bold mb-3">الباقة الأساسية<br><span class="fs-6 text-muted">Landing
+                                    Page</span></h3>
+                            <h4 class="text-info mb-3">3,000 – 5,000 جنيه</h4>
+                            <ul class="list-unstyled mb-4">
+                                <li><i class="fa-solid fa-check text-success ms-2"></i>صفحة واحدة احترافية متجاوبة مع كل
+                                    الأجهزة</li>
+                                <li><i class="fa-solid fa-check text-success ms-2"></i>تصميم مخصص يعكس هوية مشروعك</li>
+                                <li><i class="fa-solid fa-check text-success ms-2"></i>زر تواصل مباشر (واتساب أو نموذج)
+                                </li>
+                                <li><i class="fa-solid fa-check text-success ms-2"></i>تسليم سريع خلال 4 – 6 أيام</li>
+                            </ul>
+                            <a href="#contact-us" class="btn btn-outline-info btn-lg w-75 mx-auto">تواصل معنا</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- الباقة المتوسطة -->
+                <div class="col-md-4 mb-4" >
+                    <div
+                        class="card h-100 shadow-lg border-warning border-2 animate__animated animate__fadeInUp animate__delay-1s">
+                        <div class="card-body text-center">
+                            <div class="plan-icon mb-3"><i class="fa-solid fa-building text-warning"></i></div>
+                            <h3 class="card-title fw-bold mb-3">الباقة المتوسطة<br><span class="fs-6 text-muted">موقع
+                                    شركة (3–5 صفحات)</span></h3>
+                            <h4 class="text-warning mb-3">6,000 – 12,000 جنيه</h4>
+                            <ul class="list-unstyled mb-4">
+                                <li><i class="fa-solid fa-check text-success ms-2"></i>موقع متكامل يعرض شركتك أو خدماتك
+                                </li>
+                                <li><i class="fa-solid fa-check text-success ms-2"></i>صفحات: الرئيسية – من نحن –
+                                    الخدمات – تواصل</li>
+                                <li><i class="fa-solid fa-check text-success ms-2"></i>لوحة تحكم لتعديل المحتوى بسهولة
+                                </li>
+                                <li><i class="fa-solid fa-check text-success ms-2"></i>تحسين أساسي لمحركات البحث (SEO)
+                                </li>
+                                <li><i class="fa-solid fa-check text-success ms-2"></i>مدة التنفيذ: 10 – 14 يوم</li>
+                            </ul>
+                            <a href="#contact-us" class="btn btn-warning btn-lg w-75 mx-auto text-white">تواصل معنا</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- الباقة المتقدمة -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm border-0 animate__animated animate__fadeInUp animate__delay-2s">
+                        <div class="card-body text-center">
+                            <div class="plan-icon mb-3"><i class="fa-solid fa-cart-shopping text-success"></i></div>
+                            <h3 class="card-title fw-bold mb-3">الباقة المتقدمة<br><span class="fs-6 text-muted">متجر
+                                    إلكتروني</span></h3>
+                            <h4 class="text-success mb-3">حتى 24,000 جنيه</h4>
+                            <ul class="list-unstyled mb-4">
+                                <li><i class="fa-solid fa-check text-success ms-2"></i>متجر إلكتروني كامل يعرض منتجاتك
+                                    باحترافية</li>
+                                <li><i class="fa-solid fa-check text-success ms-2"></i>طرق دفع إلكتروني آمنة (Paymob /
+                                    Stripe)</li>
+                                <li><i class="fa-solid fa-check text-success ms-2"></i>إدارة منتجات وفواتير وتقارير</li>
+                                <li><i class="fa-solid fa-check text-success ms-2"></i>تصميم مخصص للهوية البصرية</li>
+                                <li><i class="fa-solid fa-check text-success ms-2"></i>مدة التنفيذ: 3 – 4 أسابيع</li>
+                            </ul>
+                            <a href="#contact-us" class="btn btn-success btn-lg w-75 mx-auto">تواصل معنا</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- خدمات إضافية -->
+        <section id="services" class="row justify-content-center mt-5"  data-aos="fade-up">
+            <div class="col-lg-8">
+                <div class="card border-0 shadow-sm p-4 mb-4">
+                    <h4 class="fw-bold mb-3 text-primary"><i class="fa-solid fa-plus-circle ms-2"></i>خدمات إضافية</h4>
+                    <ul class="list-unstyled mb-0">
+                        <li><i class="fa-solid fa-globe text-info ms-2"></i>حجز دومين + استضافة: <span
+                                class="fw-bold">1,000 – 2,000 جنيه سنويًا</span></li>
+                        <li><i class="fa-solid fa-headset text-info ms-2"></i>صيانة ودعم شهري: <span
+                                class="fw-bold">1,500 – 3,000 جنيه</span></li>
+                        <li><i class="fa-solid fa-chart-line text-info ms-2"></i>تحسين SEO متقدم: <span
+                                class="fw-bold">يبدأ من 3,000 جنيه</span></li>
+                        <li><i class="fa-solid fa-pen-nib text-info ms-2"></i>كتابة محتوى/صور: <span
+                                class="fw-bold">بالاتفاق</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- لماذا تختار باقات The Line؟ -->
+        <section id="why-choose" class="why-choose"  data-aos="fade-up">
+            <div class="container">
+                <div class="section-title text-center">
+                    <h2>لماذا تختار باقات The Line؟</h2>
+                    <p>نحن لا نقدم فقط خدمات تقنية، بل نقدم شراكة حقيقية لنمو عملك وتحقيق أهدافك الرقمية</p>
+                </div>
+                <div class="benefits-grid">
+                    <div class="benefit-card animate-fadeInUp delay-1">
+                        <div class="benefit-icon">
+                            <i class="fas fa-user-friends"></i>
+                        </div>
+                        <h3 class="benefit-title">سهولة الاستخدام</h3>
+                        <p class="benefit-desc">جميع أنظمتنا ولوحات التحكم مصممة لتكون بديهية وسهلة الإدارة حتى لغير
+                            المتخصصين.</p>
+                    </div>
+                    <div class="benefit-card animate-fadeInUp delay-2">
+                        <div class="benefit-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="benefit-title">الأمان أولاً</h3>
+                        <p class="benefit-desc">نبني أنظمتك بأكواد قوية لسد جميع ثغرات الاختراق وحماية بياناتك وعملائك.
+                        </p>
+                    </div>
+                    <div class="benefit-card animate-fadeInUp delay-3">
+                        <div class="benefit-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3 class="benefit-title">قاعدة بيانات قوية</h3>
+                        <p class="benefit-desc">بنية تحتية مهيئة للتطوير والنمو مع مشروعك، تضمن استمرارية عملك دون
+                            انقطاع.</p>
+                    </div>
+                    <div class="benefit-card animate-fadeInUp delay-4">
+                        <div class="benefit-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3 class="benefit-title">دعم فني موثوق</h3>
+                        <p class="benefit-desc">فريقنا التقني على أتم الاستعداد لمساعدتك في أي وقت، لضمان استمرارية عملك
+                            دون انقطاع.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- لم تجد الباقة المناسبة؟ -->
+        <section class="cta" id="contact"  data-aos="fade-up">
+            <div class="container">
+                <h2>لم تجد الباقة المناسبة؟</h2>
+                <p>لا تقلق! نحن نقدم باقات مخصصة بالكامل. أخبرنا بمتطلبات مشروعك، وسنصمم لك حلاً فريداً يلبي كل
+                    احتياجاتك ويتناسب مع ميزانيتك.</p>
+                <a href="#contact-us" class="cta-btn">اطلب باقة مخصصة</a>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section-7 py-5 mt-5" id="contact-us"  data-aos="fade-up">
+            <div class="container">
+                <div class="head-section w-100 text-center">
+                    <h3 class="fw-bold position-relative">تواصل معنا</h3>
+                </div>
+                <div class="row justify-content-center align-items-start py-5 mt-5">
+                    <div class="col-md-4 col-sm-12 mt-sm-3">
+                        <div class="row">
+                            <div class="col-12">
+                                <h4 class="mt-2">من خلال أرقام التواصل</h4>
+                                <div class="social-icon">
+                                    <div class="d-flex justify-content-start align-items-center py-2">
+                                        <a href="#" class="icon text-center align-content-center">
+                                            <i class="fa-solid fa-phone"></i>
+                                        </a>
+                                        <a href="https://wa.me/201098306877" target="_blank" class="pe-3 text-p-a">
+                                            201098306877+
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="social-icon">
+                                    <div class="d-flex justify-content-start align-items-center py-2">
+                                        <a href="#" class="icon text-center align-content-center">
+                                            <i class="fa-solid fa-phone"></i>
+                                        </a>
+                                        <a href="https://wa.me/201505736027" target="_blank" class="pe-3 text-p-a">
+                                            201505736027+
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <h4 class="mt-2">من خلال البريد الإلكتروني</h4>
+                                <div class="social-icon">
+                                    <div class="d-flex justify-content-start align-items-center py-2">
+                                        <a href="#" class="icon text-center align-content-center">
+                                            <i class="fa-solid fa-envelope"></i>
+                                        </a>
+                                        <a href="mailto:theline.it@gmail.com" class="pe-3 text-p-a">
+                                            theline.it@gmail.com
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8 col-sm-12 mt-sm-3">
+                        <form id="contact-form" method="POST" action="https://formsubmit.co/theline.it@gmail.com">
+                            <input type="hidden" name="_captcha" value="false">
+                            <!-- رسائل النجاح -->
+                            <div id="success-alert" class="alert alert-success d-none mt-4" role="alert">
+                                تم الإرسال بنجاح، شكرًا لتواصلك معنا!
+                            </div>
+
+                            <!-- الاسم الكامل -->
+                            <div class="d-flex justify-content-between w-100">
+                                <div class="form-floating mb-3 w-100 ms-3">
+                                    <input type="text" class="form-control" name="first_name" id="first_name"
+                                        placeholder="الاسم الاول" required>
+                                    <label for="first_name">الاسم الاول :</label>
+                                </div>
+                                <div class="form-floating mb-3 w-100">
+                                    <input type="text" class="form-control" name="last_name" id="last_name"
+                                        placeholder="الاسم الاخير" required>
+                                    <label for="last_name">الاسم الاخير :</label>
+                                </div>
+                            </div>
+
+                            <!-- رقم الهاتف -->
+                            <div class="form-floating mb-3 w-100 ms-3">
+                                <input type="text" class="form-control" name="رقم_الهاتف" id="phone"
+                                    placeholder="رقم الهاتف" required>
+                                <label for="phone">رقم الهاتف :</label>
+                            </div>
+
+                            <!-- البريد الإلكتروني -->
+                            <div class="form-floating mb-3 w-100 ms-3">
+                                <input type="email" class="form-control" name="البريد_الإلكتروني" id="email"
+                                    placeholder="example@gmail.com" required>
+                                <label for="email">البريد الالكتروني :</label>
+                            </div>
+
+                            <!-- الملاحظات / الرسالة -->
+                            <div class="form-floating">
+                                <textarea class="form-control" name="الرسالة" id="notes" placeholder="ملاحظات"
+                                    style="height: 200px" required></textarea>
+                                <label for="notes">ملاحظات</label>
+                            </div>
+
+                            <!-- زر الإرسال -->
+                            <div class="btnDiv pt-5">
+                                <button type="submit" class="btn py-3 px-4 fw-bold">
+                                    <span>إرسال</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-5"  data-aos="fade-up">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-md-5 col-sm-12 mt-sm-3">
+                    <div class="div-content">
+                        <div class="div-img mb-3">
+                            <img src="img/The Line-18.png" loading="lazy" alt="logo" width="200px">
+                        </div>
+                        <p class="my-3 mt-5 mt-sm-0 fw-bold">حقوق الملكية محفوظة لصالح شركة © The Line</p>
+                        <div class="icons-group mt-5">
+                            <a href="https://www.facebook.com/share/19K9ZVeQeM/" class="icon">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/theline9106/" class="icon">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/company/the-line-information-solutions/" class="icon">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7 col-sm-12 mt-5 mt-lg-0">
+                    <div class="row d-flex justify-content-between align-items-center">
+                        <div class="col-md-4 col-sm-12">
+                            <div class="div-content">
+                                <h4 class="fw-bold mb-4">الشركة</h4>
+                                <ul>
+                                    <li><a href="#about-us">من نحن</a></li>
+                                    <li><a href="#system-section">اقسام البرنامج</a></li>
+                                    <li><a href="#features">مميزات البرنامج</a></li>
+                                    <li><a href="#blog">معرض الاعمال</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-12 mt-5 mt-lg-0">
+                            <div class="div-content">
+                                <h4 class="fw-bold mb-4">الدعم الفني</h4>
+                                <ul>
+                                    <li><a href="#">مركز المساعدة</a></li>
+                                    <li><a href="#">تواصل مع الفريق</a></li>
+                                    <li><a href="#">الخصوصية</a></li>
+                                    <li><a href="#">الحالة</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-12 mt-5 mt-lg-0">
+                            <div class="div-content">
+                                <h4 class="fw-bold mt-2">ابقى على تواصل</h4>
+                                <div class="div-input-icon d-flex justify-content-between align-items-center">
+                                    <input type="text" class="form-control" placeholder=" البريد الالكتروني">
+                                    <i class="fa-solid fa-paper-plane"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        // Remove loader after page load
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('loader').style.opacity = '0';
+                setTimeout(() => {
+                    document.getElementById('loader').remove();
+                }, 500);
+            }, 1000);
+        });
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const closeMenuBtn = document.getElementById('closeMenuBtn');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                // Toggle mobile menu visibility
+                mobileMenu.classList.toggle('active');
+            });
+        }
+
+        if (closeMenuBtn && mobileMenu) {
+            closeMenuBtn.addEventListener('click', () => {
+                // Hide mobile menu
+                mobileMenu.classList.remove('active');
+            });
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                mobileMenu.classList.remove('active');
+            }
+        });
+
+        // Form submission with success message
+        const contactForm = document.getElementById('contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                // Show success message
+                const successAlert = document.getElementById('success-alert');
+                if (successAlert) {
+                    successAlert.classList.remove('d-none');
+                    successAlert.classList.add('d-block');
+
+                    // Reset form
+                    this.reset();
+
+                    // Hide success message after 5 seconds
+                    setTimeout(() => {
+                        successAlert.classList.remove('d-block');
+                        successAlert.classList.add('d-none');
+                    }, 5000);
+                }
+            });
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const navbarHeight = document.getElementById('navbar').offsetHeight;
+                    window.scrollTo({
+                        top: target.offsetTop - navbarHeight - 20,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Active navbar link on scroll
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-links a, .mobile-nav-links a');
+
+        function setActiveLink() {
+            let current = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 150;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', setActiveLink);
+        window.addEventListener('load', setActiveLink);
+    </script>
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100,
+            easing: 'ease-in-out-sine'
+        });
+    </script>
+</body>
+
+</html>
