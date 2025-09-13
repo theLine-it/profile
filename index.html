@@ -50,45 +50,45 @@
     <!-- start header  -->
     <header class="position-relative" id="home">
         <!-- start nav  -->
-<nav id="navbar">
-    <a href="#" class="logo">   
-        <img src="img/The Line-18.png" alt="شعار الشركة - حلول برمجية مبتكرة بألوان زرقاء وبيضاء">
-    </a>
-    <ul class="nav-links">
-        <li><a href="#home" class="active"><i class="fas fa-home"></i> الرئيسية</a></li>
-        <li><a href="#about-us"><i class="fas fa-users"></i> من نحن</a></li>
-        <li><a href="#services"><i class="fas fa-laptop-code"></i> خدماتنا</a></li>
-        <li><a href="#features"><i class="fas fa-star"></i> مميزاتنا</a></li>
-        <li><a href="subscription.html"><i class="fas fa-id-card"></i> الباقات</a></li>
-        <li><a href="#questions"><i class="fas fa-question-circle"></i> الأسئلة الشائعة</a></li>
-        <li><a href="#contact-us"><i class="fas fa-phone-alt"></i> اتصل بنا</a></li>
-    </ul>
-    <button class="mobile-menu-btn" id="mobileMenuBtn">
-        <i class="fas fa-bars"></i>
-    </button>
-</nav>
+        <nav id="navbar">
+            <a href="#" class="logo">
+                <img src="img/The Line-18.png" alt="شعار الشركة - حلول برمجية مبتكرة بألوان زرقاء وبيضاء">
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home" class="active"><i class="fas fa-home"></i> الرئيسية</a></li>
+                <li><a href="#about-us"><i class="fas fa-users"></i> من نحن</a></li>
+                <li><a href="#services"><i class="fas fa-laptop-code"></i> خدماتنا</a></li>
+                <li><a href="#features"><i class="fas fa-star"></i> مميزاتنا</a></li>
+                <li><a href="subscription.html"><i class="fas fa-id-card"></i> الباقات</a></li>
+                <li><a href="#questions"><i class="fas fa-question-circle"></i> الأسئلة الشائعة</a></li>
+                <li><a href="#contact-us"><i class="fas fa-phone-alt"></i> اتصل بنا</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
 
-<!-- Mobile Menu -->
-<div class="mobile-menu" id="mobileMenu">
-    <div class="mobile-menu-header">
-        <a href="#" class="logo">
-            <img src="img/The Line-18.png" loading="lazy"
-                alt="شعار الشركة للجوّال - نسخة مصغرة من الشعار الرئيسي">
-        </a>
-        <button class="close-menu-btn" id="closeMenuBtn">
-            <i class="fas fa-times"></i>
-        </button>
-    </div>
-    <ul class="mobile-nav-links">
-        <li><a href="#home" class="active"><i class="fas fa-home"></i> الرئيسية</a></li>
-        <li><a href="#about-us"><i class="fas fa-users"></i> من نحن</a></li>
-        <li><a href="#services"><i class="fas fa-laptop-code"></i> خدماتنا</a></li>
-        <li><a href="#features"><i class="fas fa-star"></i> مميزاتنا</a></li>
-        <li><a href="subscription.html"><i class="fas fa-id-card"></i> الباقات</a></li>
-        <li><a href="#questions"><i class="fas fa-question-circle"></i> الأسئلة الشائعة</a></li>
-        <li><a href="#contact-us"><i class="fas fa-phone-alt"></i> اتصل بنا</a></li>
-    </ul>
-</div>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-header">
+                <a href="#" class="logo">
+                    <img src="img/The Line-18.png" loading="lazy"
+                        alt="شعار الشركة للجوّال - نسخة مصغرة من الشعار الرئيسي">
+                </a>
+                <button class="close-menu-btn" id="closeMenuBtn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <ul class="mobile-nav-links">
+                <li><a href="#home" class="active"><i class="fas fa-home"></i> الرئيسية</a></li>
+                <li><a href="#about-us"><i class="fas fa-users"></i> من نحن</a></li>
+                <li><a href="#services"><i class="fas fa-laptop-code"></i> خدماتنا</a></li>
+                <li><a href="#features"><i class="fas fa-star"></i> مميزاتنا</a></li>
+                <li><a href="subscription.html"><i class="fas fa-id-card"></i> الباقات</a></li>
+                <li><a href="#questions"><i class="fas fa-question-circle"></i> الأسئلة الشائعة</a></li>
+                <li><a href="#contact-us"><i class="fas fa-phone-alt"></i> اتصل بنا</a></li>
+            </ul>
+        </div>
 
         <img src="img/aboutus.jpg" alt="خلفية - عن الشركة" class="header-bg">
         <div class="overlay"></div>
@@ -858,7 +858,7 @@
                         </div>
                         <!-- زر الإرسال -->
                         <div class="btnDiv pt-5">
-                            <button type="submit" class="btn py-3 px-4 fw-bold hvr-underline-from-right">
+                            <button type="subzmit" class="btn py-3 px-4 fw-bold hvr-underline-from-right">
                                 <span>ارسال</span>
                             </button>
                         </div>
@@ -945,6 +945,22 @@
             offset: 100,
             easing: 'ease-in-out-sine'
         });
+    </script>
+    <script>
+        // تغيير لون النافبار عند الـ Scroll
+        window.addEventListener("scroll", function () {
+            const navbar = document.getElementById("navbar");
+            navbar.classList.toggle("scrolled", window.scrollY > 50);
+        });
+
+        // التحكم في قائمة الموبايل
+        const menuBtn = document.getElementById("mobileMenuBtn");
+        const navLinks = document.querySelector(".nav-links");
+
+        menuBtn.addEventListener("click", () => {
+            navLinks.classList.toggle("open");
+        });
+
     </script>
     <script src="js/main.js"></script>
 </body>

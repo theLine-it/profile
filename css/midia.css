@@ -2,11 +2,17 @@
 @media (max-width:991px) {
 
     .swiper-button-next {
-        right: 70% !important;
+        right: 20px !important;
+        left: auto !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
     }
 
     .swiper-button-prev {
-        right: 84% !important;
+        right: auto !important;
+        left: 20px !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
     }
 
     .accordion-button {
@@ -70,7 +76,7 @@
         z-index: 1100;
         transition: transform 0.3s ease;
         padding: 20px;
-        overflow-y: auto;
+        overflow-y: visible;
         transform: translateX(100%);
         display: block !important;
     }
@@ -221,6 +227,21 @@
            تنسيق الموبايل (Mobile)
         ===================================================== */
 @media (max-width: 768px) {
+
+    /* إصلاح أسهم Swiper للشاشات الصغيرة */
+    .swiper-button-next {
+        right: 10px !important;
+        width: 35px !important;
+        height: 35px !important;
+        font-size: 14px !important;
+    }
+
+    .swiper-button-prev {
+        left: 10px !important;
+        width: 35px !important;
+        height: 35px !important;
+        font-size: 14px !important;
+    }
 
     /* إخفاء القائمة الأصلية */
     .nav-down {
