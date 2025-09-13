@@ -1,6 +1,7 @@
 .btn {
-    color: var(--body-color);
-    background-color: var(--main-color);
+    background: linear-gradient(90deg, var(--main-color) 60%, #3db8ff 100%);
+    color: #fff;
+    border: 2px solid var(--main-color);
     border-radius: var(--border-radius);
     transition: var(--transition);
 }
@@ -50,12 +51,12 @@ nav .up-nav .btn:hover {
 
 /* nav-down */
 nav {
-    padding: 10px 5%;
+    padding: 1rem 4rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.733);
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
     position: fixed;
     top: 0;
     right: 0;
@@ -123,7 +124,7 @@ nav .nav-down {
 
 /* logo */
 .logo {
-    height: 70px;
+    height: 50px;
     transition: var(--transition);
 }
 
@@ -137,29 +138,31 @@ nav .nav-down {
 .nav-links {
     display: flex;
     list-style: none;
+    gap: 2rem;
 }
 
 .nav-links li {
-    margin-left: 30px;
+    margin-left: 0;
     position: relative;
 }
 
 .nav-links a {
-    color: var(--main-color);
+    color: var(--text-dark);
     text-decoration: none;
     font-weight: 500;
     transition: var(--transition);
     display: flex;
     align-items: center;
+    gap: 0.5rem;
 }
 
 .nav-links a i {
-    margin-left: 5px;
+    margin-left: 0;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
-    color: var(--sub-color);
+    color: var(--main-color);
 }
 
 .nav-links a.active::after {
@@ -169,7 +172,7 @@ nav .nav-down {
     right: 0;
     width: 100%;
     height: 2px;
-    background-color: var(--sub-color);
+    background-color: var(--main-color);
 }
 
 /* end nav */
@@ -254,56 +257,60 @@ header .wave .wave-svg {
 }
 
 /* menu */
-
+/* زر القائمة */
 .mobile-menu-btn {
-    display: none;
+    display: none; /* يظهر فقط في الموبايل */
     background: none;
     border: none;
-    color: var(--main-color);
+    color: var(--text-dark);
     font-size: 24px;
     cursor: pointer;
 }
 
-/* Mobile Menu */
+/* القائمة الجوال */
 .mobile-menu {
     position: fixed;
     top: 0;
-    left: -100%;
-    width: 50%;
+    left: -100%; /* مخفية يسار الشاشة */
+    transform: translateX(-100%);
+    width: 300px;
     height: 100vh;
-    background-color: var(--main-color);
+    background-color: var(--body-color);
     z-index: 1100;
-    transition: var(--transition);
+    transition: transform 0.3s ease, left 0.3s ease;
     padding: 20px;
-    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1); /* ظل من اليسار */
 }
 
-
-
+/* لما تفتح القائمة */
 .mobile-menu.active {
     left: 0;
-    /* ← تظهر من اليسار */
+    transform: translateX(0);
 }
 
+/* رأس القائمة */
 .mobile-menu-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 30px;
     padding-bottom: 15px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .close-menu-btn {
     background: none;
     border: none;
-    color: white;
+    color: var(--text-dark);
     font-size: 24px;
     cursor: pointer;
 }
 
+/* روابط القائمة */
 .mobile-nav-links {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .mobile-nav-links li {
@@ -311,33 +318,32 @@ header .wave .wave-svg {
 }
 
 .mobile-nav-links a {
-    color: white;
     text-decoration: none;
     font-size: 18px;
     display: flex;
     align-items: center;
     transition: var(--transition);
+    color: var(--text-dark);
 }
 
 .mobile-nav-links a i {
-    margin-left: 10px;
+    margin-left: 10px; /* الآن من اليسار */
 }
 
 .mobile-nav-links a:hover {
-    color: var(--sub-color);
-    transform: translateX(-10px);
+    color: var(--main-color);
+    transform: translateX(10px); /* تتحرك يمين عند الهوفر */
 }
 
 .mobile-nav-links a.active {
-    background-color: white;
-    /* خلفية العنصر */
-    color: var(--main-color);
-    /* لون الخط — تأكد من تعريف --main-color مسبقًا */
     font-weight: bold;
+    color: var(--main-color);
     border-radius: 8px;
     padding: 8px 12px;
+    background-color: rgba(0, 0, 0, 0.05);
 }
 
+/* الخلفية الداكنة (overlay) */
 .menu-overlay {
     position: fixed;
     top: 0;
@@ -348,7 +354,7 @@ header .wave .wave-svg {
     z-index: 1050;
     opacity: 0;
     visibility: hidden;
-    transition: var(--transition);
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .menu-overlay.active {
@@ -356,13 +362,25 @@ header .wave .wave-svg {
     visibility: visible;
 }
 
+/* إظهار زر القائمة فقط على الشاشات الصغيرة */
+@media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none; /* نخفي قائمة الديسكتوب */
+    }
+}
+
+
 /* Hero Section */
 .hero-content {
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 150px 10% 100px;
+    padding: 80px 0 60px;
     position: relative;
     z-index: 1;
 }
@@ -542,13 +560,6 @@ header .wave .wave-svg {
     position: relative;
 }
 
-.container {
-    max-width: 1200px;
-    /* توحيد العرض مع قسم portfolio */
-    margin: 0 auto;
-    position: relative;
-    z-index: 1;
-}
 
 .section-title {
     font-size: 2.2rem;

@@ -2,11 +2,11 @@
     --dir: rtl;
     /* Colors */
     --main-color: #0476bf;
-    --secondary-color: #198754;
+    --secondary-color:#2F3640;
     --sub-color: var(--secondary-color);
     --text-dark: #333;
     --text-light: #fff;
-    --p-color: #6e6e6e;
+    --p-color: #1FC599;
     --body-color: #fff;
     --section-color: #f1f1f1;
     --bg-light: #f7fafd;
@@ -40,6 +40,7 @@ body {
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
+
 
 .body-color {
     background-color: var(--body-color);
@@ -134,7 +135,7 @@ p {
     .container-sm,
     .container-xl,
     .container-xxl {
-        max-width: 1120px;
+        max-width: 1200px;
     }
 }
 
@@ -204,4 +205,11 @@ h6 {
 
 .animate__delay-3s {
     animation-delay: 3s;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* يمنع ظهور مساحة إضافية يمين/يسار */
 }
